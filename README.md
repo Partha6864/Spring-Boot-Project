@@ -14,6 +14,55 @@ This project is a simple CRUD (Create, Read, Update, Delete) application built u
 - **MySQL:** The database used for storing application data.
 - **Lombok:** To reduce boilerplate code.
 
+## Setup and Installation
+
+1. **Clone the repository**:
+    ```bash
+    git clone https://github.com/your-username/spring-boot-crud-application.git
+    cd spring-boot-crud-application
+    ```
+
+2. **Configure the Database**:
+    - Ensure you have MySQL installed and running.
+    - Create a MySQL database named `student_management`.
+    - Update the `application.properties` file with your database credentials.
+
+    ```properties
+    spring.datasource.url=jdbc:mysql://localhost:3306/student_management
+    spring.datasource.username=root
+    spring.datasource.password=Partha@6864
+    spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+    spring.jpa.hibernate.ddl-auto=update
+    ```
+
+3. **Build the Project**:
+    - Make sure you have Maven installed. You can check by running:
+        ```bash
+        mvn -version
+        ```
+    - Navigate to the project directory and build the project using Maven:
+        ```bash
+        ./mvnw clean install
+        ```
+
+4. **Run the Application**:
+    - After building the project, you can run the application using Maven:
+        ```bash
+        ./mvnw spring-boot:run
+        ```
+    - Alternatively, you can run the application by executing the generated JAR file:
+        ```bash
+        java -jar target/spring-boot-crud-application-0.0.1-SNAPSHOT.jar
+        ```
+
+5. **Access the Application**:
+    - The application will run on [http://localhost:8080](http://localhost:8080).
+
+## Testing the Application
+
+- **Using Postman**:
+    - Import the provided Postman collection (if available) or manually create requests to test the various API endpoints.
+
 ## License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
